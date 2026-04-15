@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Star, MessageCircle } from "lucide-react";
+import { Star, MessageCircle, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { openWhatsApp } from "@/lib/whatsapp";
 
 const products = [
