@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Phone } from "lucide-react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "@/assets/rajvi-logo.png";
 import { openWhatsApp } from "@/lib/whatsapp";
 
 const navLinks = [
   { label: "Home", href: "#home" },
-  { label: "Products", href: "#products" },
+  { label: "Products", href: "/products", isRoute: true },
   { label: "About", href: "#about" },
   { label: "Reviews", href: "#reviews" },
   { label: "FAQ", href: "#faq" },
