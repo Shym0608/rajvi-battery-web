@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Star, MessageCircle, ArrowRight } from "lucide-react";
+import { Star, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { openWhatsApp } from "@/lib/whatsapp";
 
@@ -56,7 +56,14 @@ export default function FeaturedProducts() {
             </motion.div>
           ))}
         </div>
-      </div>
+        <div className="text-center mt-10">
+          <Link
+            to="/products"
+            className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-3 rounded-full font-semibold hover:bg-primary/90 transition-colors"
+          >
+            View All Products →
+          </Link>
+        </div>
     </section>
   );
 }
