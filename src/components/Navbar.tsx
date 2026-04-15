@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Phone } from "lucide-react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "@/assets/rajvi-logo.png";
 import { openWhatsApp } from "@/lib/whatsapp";
 
-const navLinks = [
+const navLinks: { label: string; href: string; isRoute?: boolean }[] = [
   { label: "Home", href: "#home" },
-  { label: "Products", href: "#products" },
+  { label: "Products", href: "/products", isRoute: true },
   { label: "About", href: "#about" },
   { label: "Reviews", href: "#reviews" },
   { label: "FAQ", href: "#faq" },
@@ -16,6 +17,7 @@ const navLinks = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -39,8 +41,9 @@ export default function Navbar() {
           {navLinks.map((l) => (
             <a
               key={l.href}
-              href={l.href}
-              className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors"
+              href={l.isRoute ? undefined : l.href}
+              onClick={l.isRoute ? (e) => { e.preventDefault(); navigate(l.href); } : undefined}
+              className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors cursor-pointer"
             >
               {l.label}
             </a>
@@ -72,9 +75,12 @@ export default function Navbar() {
               {navLinks.map((l) => (
                 <a
                   key={l.href}
-                  href={l.href}
-                  onClick={() => setMobileOpen(false)}
-                  className="text-sm font-medium text-foreground/70 hover:text-primary py-2"
+                  href={l.isRoute ? undefined : l.href}
+                  onClick={() => {
+                    setMobileOpen(false);
+                    if (l.isRoute) navigate(l.href);
+                  }}
+                  className="text-sm font-medium text-foreground/70 hover:text-primary py-2 cursor-pointer"
                 >
                   {l.label}
                 </a>
