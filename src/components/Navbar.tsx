@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import logo from "@/assets/rajvi-logo.png";
 import { openWhatsApp } from "@/lib/whatsapp";
 
-const navLinks = [
+const navLinks: { label: string; href: string; isRoute?: boolean }[] = [
   { label: "Home", href: "#home" },
   { label: "Products", href: "/products", isRoute: true },
   { label: "About", href: "#about" },
