@@ -64,6 +64,7 @@ export default function FeaturedProducts() {
             View All Products →
           </Link>
         </div>
+      </div>
     </section>
   );
 }
