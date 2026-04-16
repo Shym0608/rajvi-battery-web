@@ -33,8 +33,8 @@ export default function Footer() {
           <div>
             <h4 className="font-bold mb-4">Contact Us</h4>
             <ul className="space-y-2 text-sm opacity-70">
-              <li>Ahmedabad, Gujarat</li>
-              <li>+91 98765 43210</li>
+              <li>Ambaji Nagar, Una, Gujarat</li>
+              <li>+91 76009 83399</li>
               <li>Mon - Sat: 9AM - 8PM</li>
             </ul>
             <button

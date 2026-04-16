@@ -28,7 +28,7 @@ export default function ContactSection() {
               </div>
               <div>
                 <h4 className="font-semibold text-foreground">Visit Us</h4>
-                <p className="text-sm text-muted-foreground">Rajvi Battery Service, Main Road, Ahmedabad, Gujarat</p>
+                <p className="text-sm text-muted-foreground">Ambaji Nagar, Una, Gujarat – Ambaji Nagar</p>
               </div>
             </div>
             <div className="flex gap-4 items-start">
@@ -37,7 +37,7 @@ export default function ContactSection() {
               </div>
               <div>
                 <h4 className="font-semibold text-foreground">Call Us</h4>
-                <p className="text-sm text-muted-foreground">+91 98765 43210</p>
+                <p className="text-sm text-muted-foreground">+91 76009 83399</p>
               </div>
             </div>
             <div className="flex gap-4 items-start">
