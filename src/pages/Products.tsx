@@ -27,6 +27,16 @@ import imgLivfastUltra from "@/assets/products/livfast-maxximo-ultra.jpeg";
 import imgSolanceSlx5l from "@/assets/products/solance-platinum-slx5l.jpeg";
 import imgLivfastNeomaxx from "@/assets/products/livfast-neomaxx.jpeg";
 import imgLumUltraCharge from "@/assets/products/luminous-ultra-charge.jpeg";
+import imgLfNeomaxx21048 from "@/assets/products/livfast-neomaxx-nmtt21048.jpeg";
+import imgLfNeomaxx21048v2 from "@/assets/products/livfast-neomaxx-nmtt21048-v2.jpeg";
+import imgLfNeomaxxMxstj from "@/assets/products/livfast-neomaxx-mxstj-pro.jpeg";
+import imgLumAmpBox from "@/assets/products/luminous-ampbox.jpeg";
+import imgLumAmpPower from "@/assets/products/luminous-amppower-200ah.jpeg";
+import imgLumIltt32060 from "@/assets/products/luminous-inverlast-iltt32060.jpeg";
+import imgLfNeomaxx18060 from "@/assets/products/livfast-neomaxx-nmtt18060.jpeg";
+import imgLumRedCharge from "@/assets/products/luminous-redcharge-rc25000pro.jpeg";
+import imgLfMaxximoTubular from "@/assets/products/livfast-maxximo-tubular.jpeg";
+import imgLfMaxximo2860 from "@/assets/products/livfast-maxximo-mxtt2860.jpeg";
 
 const products = [
   { name: "Exide Inva Tubular", type: "Inverter Battery", capacity: "150Ah", warranty: "36 Months", rating: 4.9, image: imgInvaTubular },
@@ -49,6 +59,16 @@ const products = [
   { name: "Solance Platinum SLX 5L", type: "Bike Battery", capacity: "5Ah", warranty: "48 Months", rating: 4.7, image: imgSolanceSlx5l },
   { name: "Livfast NeoMaxx NMTT 26060", type: "Inverter Battery", capacity: "Tall Tubular", warranty: "36+24 Months", rating: 4.8, image: imgLivfastNeomaxx },
   { name: "Luminous Ultra Charge UCTT 28066", type: "Inverter Battery", capacity: "250Ah", warranty: "66 Months", rating: 4.9, image: imgLumUltraCharge },
+  { name: "Livfast NeoMaxx NMTT 21048", type: "Inverter Battery", capacity: "Tall Tubular", warranty: "24+24 Months", rating: 4.7, image: imgLfNeomaxx21048 },
+  { name: "Livfast NeoMaxx NMTT 21048 Plus", type: "Inverter Battery", capacity: "Tall Tubular", warranty: "24+24 Months", rating: 4.7, image: imgLfNeomaxx21048v2 },
+  { name: "Livfast NeoMaxx MXSTJ 19048 Pro", type: "Inverter Battery", capacity: "Short Tubular Jumbo", warranty: "24+24 Months", rating: 4.8, image: imgLfNeomaxxMxstj },
+  { name: "Luminous AmpBox AB30060", type: "Gel Battery", capacity: "5 Hour Backup", warranty: "60 Months", rating: 4.8, image: imgLumAmpBox },
+  { name: "Luminous AmpPower 66AP250TT", type: "Inverter Battery", capacity: "200Ah", warranty: "60 Months", rating: 4.9, image: imgLumAmpPower },
+  { name: "Luminous Inverlast ILTT 32060 Pro", type: "Inverter Battery", capacity: "300Ah", warranty: "60 Months", rating: 4.9, image: imgLumIltt32060 },
+  { name: "Livfast NeoMaxx NMTT 18060", type: "Inverter Battery", capacity: "Tall Tubular", warranty: "36+24 Months", rating: 4.8, image: imgLfNeomaxx18060 },
+  { name: "Luminous Red Charge RC 25000 Pro", type: "Inverter Battery", capacity: "200Ah", warranty: "48 Months", rating: 4.8, image: imgLumRedCharge },
+  { name: "Livfast Maxximo Tubular", type: "Inverter Battery", capacity: "250Ah", warranty: "60 Months", rating: 4.8, image: imgLfMaxximoTubular },
+  { name: "Livfast Maxximo MXTT 2860", type: "Inverter Battery", capacity: "250Ah", warranty: "60 Months", rating: 4.8, image: imgLfMaxximo2860 },
 ];
 
 export default function Products() {
