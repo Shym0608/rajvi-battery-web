@@ -17,6 +17,16 @@ import imgMileageMl38 from "@/assets/products/exide-mileage-ml38.jpeg";
 import imgHomeInvaMaster from "@/assets/products/exide-home-invamaster.jpeg";
 import imgRange from "@/assets/products/exide-range.jpeg";
 import imgAmazeSolar from "@/assets/products/amaze-solar.jpeg";
+import imgLumInverlast250 from "@/assets/products/luminous-inverlast-250ah.jpeg";
+import imgLumInverlast300 from "@/assets/products/luminous-inverlast-300ah.jpeg";
+import imgExideMileageCar from "@/assets/products/exide-mileage-car.jpeg";
+import imgLivfastMxtt from "@/assets/products/livfast-maxximo-mxtt2460.jpeg";
+import imgLumEvoD1050 from "@/assets/products/luminous-evo-d1050.jpeg";
+import imgLumInverlast180 from "@/assets/products/luminous-inverlast-180ah.jpeg";
+import imgLivfastUltra from "@/assets/products/livfast-maxximo-ultra.jpeg";
+import imgSolanceSlx5l from "@/assets/products/solance-platinum-slx5l.jpeg";
+import imgLivfastNeomaxx from "@/assets/products/livfast-neomaxx.jpeg";
+import imgLumUltraCharge from "@/assets/products/luminous-ultra-charge.jpeg";
 
 const products = [
   { name: "Exide Inva Tubular", type: "Inverter Battery", capacity: "150Ah", warranty: "36 Months", rating: 4.9, image: imgInvaTubular },
@@ -29,6 +39,16 @@ const products = [
   { name: "Exide Home InvaMaster", type: "Inverter Battery", capacity: "200Ah", warranty: "60 Months", rating: 4.9, image: imgHomeInvaMaster },
   { name: "Exide Inverter Range", type: "Inverter Battery", capacity: "Various", warranty: "Up to 60 Months", rating: 4.8, image: imgRange },
   { name: "Amaze Solar Tall Tubular", type: "Solar Battery", capacity: "200Ah", warranty: "72 Months", rating: 4.8, image: imgAmazeSolar },
+  { name: "Luminous Inverlast ILTT 28060", type: "Inverter Battery", capacity: "250Ah", warranty: "60 Months", rating: 4.9, image: imgLumInverlast250 },
+  { name: "Luminous Inverlast ILTT 32060", type: "Inverter Battery", capacity: "300Ah", warranty: "60 Months", rating: 4.9, image: imgLumInverlast300 },
+  { name: "Exide Mileage Car (MIDIN55)", type: "Car Battery", capacity: "55Ah", warranty: "48 Months", rating: 4.8, image: imgExideMileageCar },
+  { name: "Livfast Maxximo MXTT 2460", type: "Inverter Battery", capacity: "210Ah", warranty: "42+18 Months", rating: 4.8, image: imgLivfastMxtt },
+  { name: "Luminous EVO D1050", type: "Inverter (UPS)", capacity: "900VA", warranty: "24 Months", rating: 4.7, image: imgLumEvoD1050 },
+  { name: "Luminous Inverlast ILTT 24060", type: "Inverter Battery", capacity: "180Ah", warranty: "60 Months", rating: 4.8, image: imgLumInverlast180 },
+  { name: "Livfast Maxximo Ultra Charge", type: "Inverter Battery", capacity: "210Ah", warranty: "60 Months", rating: 4.8, image: imgLivfastUltra },
+  { name: "Solance Platinum SLX 5L", type: "Bike Battery", capacity: "5Ah", warranty: "48 Months", rating: 4.7, image: imgSolanceSlx5l },
+  { name: "Livfast NeoMaxx NMTT 26060", type: "Inverter Battery", capacity: "Tall Tubular", warranty: "36+24 Months", rating: 4.8, image: imgLivfastNeomaxx },
+  { name: "Luminous Ultra Charge UCTT 28066", type: "Inverter Battery", capacity: "250Ah", warranty: "66 Months", rating: 4.9, image: imgLumUltraCharge },
 ];
 
 export default function Products() {
