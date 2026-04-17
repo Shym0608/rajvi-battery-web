@@ -16,7 +16,7 @@ import { useToast } from "@/hooks/use-toast";
 interface ProductInquiryDialogProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
-  product: { name: string; capacity: string; type: string; price: string } | null;
+  product: { name: string; capacity: string; type: string } | null;
 }
 
 export default function ProductInquiryDialog({ open, onOpenChange, product }: ProductInquiryDialogProps) {
@@ -42,7 +42,7 @@ export default function ProductInquiryDialog({ open, onOpenChange, product }: Pr
 
     if (!product) return;
 
-    const message = `Hi Rajvi Battery Service!\n\nI'd like to inquire about:\n📦 Product: ${product.name}\n⚡ Type: ${product.type}\n🔋 Capacity: ${product.capacity}\n💰 Price: ${product.price}\n\n👤 Name: ${trimmedName}\n📧 Email: ${trimmedEmail}\n\nPlease share availability and best price. Thank you!`;
+    const message = `Hi Rajvi Battery Service!\n\nI'd like to inquire about:\n📦 Product: ${product.name}\n⚡ Type: ${product.type}\n🔋 Capacity: ${product.capacity}\n\n👤 Name: ${trimmedName}\n📧 Email: ${trimmedEmail}\n\nPlease share availability and best price. Thank you!`;
 
     openWhatsApp(message);
     setName("");
@@ -58,7 +58,7 @@ export default function ProductInquiryDialog({ open, onOpenChange, product }: Pr
           <DialogDescription>
             {product && (
               <span className="block mt-1">
-                <strong className="text-foreground">{product.name}</strong> — {product.capacity}, {product.price}
+                <strong className="text-foreground">{product.name}</strong> — {product.capacity} · {product.type}
               </span>
             )}
           </DialogDescription>
