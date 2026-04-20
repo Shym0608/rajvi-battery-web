@@ -88,10 +88,12 @@ export default function Navbar() {
               {navLinks.map((l) => (
                 <a
                   key={l.href}
-                  href={l.isRoute ? undefined : l.href}
-                  onClick={() => {
+                  href={l.href}
+                  onClick={(e) => {
+                    e.preventDefault();
                     setMobileOpen(false);
                     if (l.isRoute) navigate(l.href);
+                    else handleHashNav(l.href);
                   }}
                   className="text-sm font-medium text-foreground/70 hover:text-primary py-2 cursor-pointer"
                 >
