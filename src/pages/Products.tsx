@@ -96,10 +96,8 @@ export default function Products() {
           <div className="text-center mb-14">
             <span className="text-primary font-semibold text-sm uppercase tracking-wider">Our Products</span>
             <h1 className="text-3xl md:text-4xl font-bold mt-2 text-foreground">All Batteries</h1>
-            <p className="text-muted-foreground mt-3 max-w-xl mx-auto">
-              Browse our complete range of batteries. Click "Add Product" to send an inquiry via WhatsApp.
-            </p>
           </div>
+
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {products.map((p, i) => (
               <motion.div
