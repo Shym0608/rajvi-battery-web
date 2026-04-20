@@ -51,8 +51,11 @@ export default function Navbar() {
           {navLinks.map((l) => (
             <a
               key={l.href}
-              href={l.isRoute ? undefined : l.href}
-              onClick={l.isRoute ? (e) => { e.preventDefault(); navigate(l.href); } : undefined}
+              href={l.isRoute ? l.href : l.href}
+              onClick={(e) => {
+                if (l.isRoute) { e.preventDefault(); navigate(l.href); }
+                else { e.preventDefault(); handleHashNav(l.href); }
+              }}
               className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors cursor-pointer"
             >
               {l.label}
