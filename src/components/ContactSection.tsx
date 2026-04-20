@@ -28,7 +28,7 @@ export default function ContactSection() {
               </div>
               <div>
                 <h4 className="font-semibold text-foreground">Visit Us</h4>
-                <p className="text-sm text-muted-foreground">Ambaji Nagar, Una-Gujarat-362560, Gujarat</p>
+                <p className="text-sm text-muted-foreground">Ambaji Nagar, Una-Gujarat-362560</p>
               </div>
             </div>
             <div className="flex gap-4 items-start">
