@@ -48,7 +48,7 @@ export default function Footer() {
               Your trusted partner for all battery needs. Genuine products, expert service, best prices.
             </p>
             <div className="flex gap-3">
-              {socials.map(({ name, icon: Icon, url }) => (
+              {socials.map(({ name, Icon, url }) => (
                 <a
                   key={name}
                   href={url}
