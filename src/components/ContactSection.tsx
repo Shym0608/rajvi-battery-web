@@ -28,7 +28,7 @@ export default function ContactSection() {
               </div>
               <div>
                 <h4 className="font-semibold text-foreground">Visit Us</h4>
-                <p className="text-sm text-muted-foreground">Ambaji Nagar, Una, Gujarat – Ambaji Nagar</p>
+                <p className="text-sm text-muted-foreground">Ambaji Nagar, Una-Gujarat-362560, Gujarat</p>
               </div>
             </div>
             <div className="flex gap-4 items-start">
@@ -46,7 +46,7 @@ export default function ContactSection() {
               </div>
               <div>
                 <h4 className="font-semibold text-foreground">Working Hours</h4>
-                <p className="text-sm text-muted-foreground">Mon - Sat: 9:00 AM - 8:00 PM</p>
+                <p className="text-sm text-muted-foreground">Mon - Sun: 10:00 AM - 8:00 PM</p>
               </div>
             </div>
             <button
