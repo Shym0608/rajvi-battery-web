@@ -18,6 +18,16 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleHashNav = (hash: string) => {
+    const id = hash.replace("#", "");
+    if (location.pathname !== "/") {
+      navigate("/", { state: { scrollTo: id } });
+    } else {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -41,8 +51,11 @@ export default function Navbar() {
           {navLinks.map((l) => (
             <a
               key={l.href}
-              href={l.isRoute ? undefined : l.href}
-              onClick={l.isRoute ? (e) => { e.preventDefault(); navigate(l.href); } : undefined}
+              href={l.isRoute ? l.href : l.href}
+              onClick={(e) => {
+                if (l.isRoute) { e.preventDefault(); navigate(l.href); }
+                else { e.preventDefault(); handleHashNav(l.href); }
+              }}
               className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors cursor-pointer"
             >
               {l.label}
@@ -75,10 +88,12 @@ export default function Navbar() {
               {navLinks.map((l) => (
                 <a
                   key={l.href}
-                  href={l.isRoute ? undefined : l.href}
-                  onClick={() => {
+                  href={l.href}
+                  onClick={(e) => {
+                    e.preventDefault();
                     setMobileOpen(false);
                     if (l.isRoute) navigate(l.href);
+                    else handleHashNav(l.href);
                   }}
                   className="text-sm font-medium text-foreground/70 hover:text-primary py-2 cursor-pointer"
                 >

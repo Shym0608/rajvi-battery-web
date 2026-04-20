@@ -1,3 +1,4 @@
+import { useNavigate, useLocation } from "react-router-dom";
 import logo from "@/assets/rajvi-logo.png";
 import { openWhatsApp } from "@/lib/whatsapp";
 
@@ -38,6 +39,18 @@ const socials = [
 ];
 
 export default function Footer() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleHashNav = (hash: string) => {
+    const id = hash.replace("#", "");
+    if (location.pathname !== "/") {
+      navigate("/", { state: { scrollTo: id } });
+    } else {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <footer className="bg-foreground text-background/80 pt-16 pb-8">
       <div className="container mx-auto px-4">
@@ -65,9 +78,9 @@ export default function Footer() {
           <div>
             <h4 className="font-bold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm opacity-70">
-              <li><a href="#home" className="hover:opacity-100 transition-opacity">Home</a></li>
-              <li><a href="#about" className="hover:opacity-100 transition-opacity">About Us</a></li>
-              <li><a href="#contact" className="hover:opacity-100 transition-opacity">Contact</a></li>
+              <li><a href="#home" onClick={(e) => { e.preventDefault(); handleHashNav("#home"); }} className="hover:opacity-100 transition-opacity cursor-pointer">Home</a></li>
+              <li><a href="#about" onClick={(e) => { e.preventDefault(); handleHashNav("#about"); }} className="hover:opacity-100 transition-opacity cursor-pointer">About Us</a></li>
+              <li><a href="#contact" onClick={(e) => { e.preventDefault(); handleHashNav("#contact"); }} className="hover:opacity-100 transition-opacity cursor-pointer">Contact</a></li>
             </ul>
           </div>
           <div>
