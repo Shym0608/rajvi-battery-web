@@ -42,7 +42,11 @@ export default function Navbar() {
       }`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between h-16 md:h-20">
-        <a href="#home">
+        <a
+          href="/"
+          onClick={(e) => { e.preventDefault(); handleHashNav("#home"); }}
+          className="cursor-pointer"
+        >
           <img src={logo} alt="Rajvi Battery Service" className="h-10 md:h-12" />
         </a>
 
